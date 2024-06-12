@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #222;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.interruptor{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 10px;
+    background-image: linear-gradient(to right, #555, #ccc);
+    cursor:pointer;
+}
+.interruptor span{
+    display: block;
+    height: 100px;
+    border-radius: 50%;
+    background-image: linear-gradient(to left, #333, #999);
+}
+.encendido span{
+    background-image: radial-gradient( rgb(30, 218, 30), rgb(24, 104, 0));
+    animation: halo 0.8s infinite
+}
+
+@keyframes halo{
+    0%,100%{
+        box-shadow: 0px 0px 10px 0px rgba(255,255,255,0);
+    }
+    50%{
+        box-shadow: 0px 0px 20px 0px rgba(255,255,255,0.6);
+    }
+}
